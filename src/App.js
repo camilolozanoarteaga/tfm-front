@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/form/form'
+import Image from './components/images/images';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container mx-auto h-screen'>
+      <div className='grid grid-cols-2 gap-8 h-screen'>
+        <div className=''>
+          <div className='pt-10'>
+            <p className='text-slate-500 text-9xl'>
+              Bienvenido
+            </p>
+            <p className='text-3xl text-slate-400'>
+              ingresar la siguiente información.
+            </p>
+          </div>
+
+          {/* Import form */}
+          <Form />
+          {/* Close import form */}
+        </div>
+
+        {/* Import Image */}
+        <Image />
+        {/* Close import Image */}
+      </div>
     </div>
   );
 }
